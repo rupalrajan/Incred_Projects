@@ -1,0 +1,344 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+    color:#fff;
+}
+html,body{
+    height:100%;
+    width:100%;
+}
+#purple{
+    height:100vh;
+    width: 100vw;
+    z-index: 100;
+    top:0;
+    position:fixed;
+    background-color:#EDBFFF;
+    opacity: 0;
+    display: none;
+    transition:opacity ease 1s;
+}
+#cursor2{
+    height: 20px;
+    width: 90px;
+    background-color: aqua;
+    border-radius: 35px;
+    position: fixed;
+    z-index: 9;
+    transform:translate(-50%, -50%) scale(1);
+    padding:1px 4px;
+}
+#cursor2 h3{
+    font-size: 14px;
+}
+
+#cursor{
+    height:20px;
+    width:20px;
+    border-radius:50%;
+    position:fixed;
+    background-color: aqua;
+    z-index: 8;
+    transition: background-image ease 0.5s;
+    background-position: center;
+    background-size: cover;
+    mix-blend-mode: difference;
+    /* transition: left linear 0.1s top linear 0.1s; */
+}
+#main{
+    background-color: #0F0D0D;
+    cursor:none;
+}
+#page1{
+    /* vh as we havent given any height to main, so we can not use % according to main */
+    min-height: 100vh;    
+    width: 100%;
+    position:relative;
+    z-index: 9;
+    padding-top: 10vw;
+}
+#nav{
+    height: 50px;
+    width:100%;
+    
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 30px;
+    position:fixed;
+    mix-blend-mode: difference;
+    z-index: 102;
+}
+#nav img {
+    height: 44px;
+    width: 32px;
+    
+}
+#nav h4{
+    font-weight: 500;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-family: 'Gilroy';
+}
+#nav h4:nth-child(1){
+    border-bottom: 1.5px solid #fff;
+
+}
+#nav #nav-mid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* gap between elements */
+    gap:14px;    
+    color:white;
+    text-transform: uppercase;
+}
+#nav #circle{
+    height: 18px;
+    width:18px;
+    border-radius: 50%;
+    background-color: #fff
+
+
+}
+
+    
+#page1>h1{
+    font-size: 7vw;
+    font-family: 'PP Mori';
+    font-weight: 400;
+   
+    margin-left: 6vw;
+}
+#page1>h2{
+    font-size: 7vw;
+    font-family: 'PP Mori';
+    font-weight: 400;
+    margin-left: 26vw;
+}
+#page1 video{
+    width:60%;
+    margin-top:7vw;
+    position:relative;
+    left:50%;
+    /* from x axis the video comes at center  */
+    transform:translate(-50%, 0);
+}
+#page1 #play{
+    padding:2vw 1.4vw;
+    font-family: 'futura';
+    color:#ffffff;
+    background-color: black;
+    font-size:1vw;
+    border-radius: 50%;
+    position:fixed;
+    text-transform:uppercase;
+    /* to hide the play button */
+    /* opacity:0;
+    scale:0; */
+}
+
+#page2{
+    min-height:80vh;
+    width:100%;
+    padding:100px 7vw;
+    border-bottom: 2px solid #6a6767;
+    position:relative;
+    z-index: 9;
+
+}
+#page2 h1{
+    font-size: 7vw;
+    font-weight: 300;
+    color:#111;
+    
+    font-family: 'PP Mori';
+}
+.page2-container{
+    /* background-color: red; */
+    height:60vh;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding:0 5vw; */
+}
+.page2-left{
+    width:32%;
+    /* background-color: blue; */
+}
+.page2-right{
+    width:25%;
+    /* background-color: blue; */
+}
+.page2-left h2{
+    font-size:3vw;
+    color:#111;
+    font-weight: 200;
+    font-family: 'PP Mori';
+    line-height: 3vw;
+}
+.page2-right p{
+    width: 20vw;
+    color:#111;
+    font-size: 20px;
+    font-family: 'PP Mori';
+}
+.page2-right button{
+    font-family: 'PP Mori';
+    width:100%;
+    border-radius: 15px;
+    border:none;
+    padding:6px 0;
+    background-color:#EDBFFF;
+    color:black;
+    margin-top: 6%;
+}
+#page3{
+    min-height:250vh;
+    width: 100%;
+    padding-top:100px;
+    position:relative;
+    z-index: 9;
+}
+#page3 h1{
+    color:black;
+    font-size: 6vw;
+    font-family: 'PP Mori';
+    font-weight:300;
+    margin-left: 7vw;
+}
+#page3 .page3-part1{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding:0 4vw;
+}
+#page3 .page3-part1 img{
+    height:450px;
+    margin-top: 180px;
+}
+#page3 .page3-part1 video{
+    height:409px;
+    width:669px;
+    margin-top: 100px;
+}
+#page3 .page3-part2{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding:0 5vw;
+   
+}
+#page3 .page3-part2 video{
+    height: 753px;
+    width: 668px;
+    margin-top: 99px;
+    margin-left: 36px;
+    padding: 0 50px;
+     
+}
+#page3 .page3-part2 img{
+    width:470px;
+    height:590px;
+    margin-top: 40px;
+    margin-right: 50px;
+    
+} 
+#page4{
+    min-height:100vh;
+    width:100%;
+    position:relative;
+    z-index: 9;
+    padding:120px 100px;
+
+}
+.elem{
+    
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 10px;
+}
+.elem h1{
+    font-size: 6vw;
+    font-weight: 500;
+    font-family: 'PP Mori';
+    transition: all ease-out 0.5s;
+    
+}
+.elem img{
+    position:absolute;
+    opacity:0;
+    transition: all ease-out 0.7s;
+    transform: translateY(10%) rotate(2deg);
+    z-index:9;
+}
+
+.elem:hover h1{
+    transform:translateY(-100%);
+    color:#EDBFFF;
+}
+.elem:hover img{
+    opacity:1;
+    transform: translateY(0%) rotate(0deg);
+    
+}
+.elem img:nth-child(1){
+    left:7%;
+    height: 336px;
+    width: 321px;
+}
+.elem img:nth-child(3){
+    right:6%;
+    
+}
+.elem img:nth-child(3){
+    right:6%;
+    height:300px;
+    width:300px;
+
+}
+
+.elem .text-div{
+    /* background-color: cadetblue; */
+    height:100px;
+    overflow:hidden;
+}
+#page5{
+    position:relative;
+    z-index: 9;
+    min-height:120vh;
+    width:100%;
+   
+    padding:140px 100px;
+}
+#page5 h2{
+    font-size: 4vw;
+    font-weight: 400;
+    font-family: 'PP Mori';
+    text-transform: uppercase;
+    margin-bottom:50px;
+}
+.box{
+    /* background-color: rgb(185, 113, 25); */
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    height:90px;
+    padding:0 20px;
+    border-top: 2px solid #dadada;
+}
+.box:nth-last-child(1){
+    border-bottom: 2px solid #dadada;
+
+}
+
+#footer{
+    height:90vh;
+    width:100%;
+    background-color: #EDBFFF;
+}
